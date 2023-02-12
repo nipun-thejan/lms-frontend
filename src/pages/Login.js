@@ -26,11 +26,11 @@ const Login = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const { name, email, password, isMember } = values;
-    if (!email || !password || (!isMember && !name)) {
+    if (!email || !password ) {
       displayAlert();
       return;
     }
-    const currentUser = { name, email, password };
+    const currentUser = { email, password };
 
     setupUser({
       currentUser,
@@ -54,9 +54,7 @@ const Login = () => {
         <Logo />
         <h3>Login</h3>
         {showAlert && <Alert />}
-        {/* name input */}
 
-        {/* email input */}
         <FormRow
           type='email'
           name='email'

@@ -26,24 +26,18 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     const { name, email, password, isMember } = values;
-    if (!email || !password || (!isMember && !name)) {
+    if (!email || !password) {
       displayAlert();
       return;
     }
-    const currentUser = { name, email, password };
-    if (isMember) {
-      setupUser({
-        currentUser,
-        endPoint: 'login',
-        alertText: 'Login Successful! Redirecting...',
-      });
-    } else {
-      setupUser({
-        currentUser,
-        endPoint: 'register',
-        alertText: 'User Created! Redirecting...',
-      });
-    }
+    const currentUser = { email, password };
+    console.log(currentUser)
+    setupUser({
+      currentUser,
+      endPoint: 'register',
+      alertText: 'User Created! Redirecting...',
+    });
+
   };
 
   useEffect(() => {
@@ -57,18 +51,17 @@ const Register = () => {
   return (
     <Wrapper className='full-page'>
       <form className='form' onSubmit={onSubmit}>
-        <Logo />
-        <h3>{values.isMember ? 'Login' : 'Register'}</h3>
+        <h3>Register</h3>
         {showAlert && <Alert />}
         {/* name input */}
-        {!values.isMember && (
+        {/* {!values.isMember && (
           <FormRow
             type='text'
             name='name'
             value={values.name}
             handleChange={handleChange}
           />
-        )}
+        )} */}
 
         {/* email input */}
         <FormRow
@@ -87,7 +80,7 @@ const Register = () => {
         <button type='submit' className='btn btn-block' disabled={isLoading}>
           submit
         </button>
-        <button
+        {/* <button
           type='button'
           className='btn btn-block btn-hipster'
           disabled={isLoading}
@@ -100,13 +93,13 @@ const Register = () => {
           }}
         >
           {isLoading ? 'loading...' : 'demo app'}
-        </button>
-        <p>
+        </button> */}
+        {/* <p>
           {values.isMember ? 'Not a member yet?' : 'Already a member?'}
           <button type='button' onClick={toggleMember} className='member-btn'>
             {values.isMember ? 'Register' : 'Login'}
           </button>
-        </p>
+        </p> */}
       </form>
     </Wrapper>
   );

@@ -13,8 +13,8 @@ const Navbar = () => {
           <FaAlignLeft />
         </button>
         <div>
-          <Logo />
-          <h3 className='logo-text'>dashboard</h3>
+            {/* <Logo /> */}
+          <h3 className='logo-text'>Learn Management System</h3>
         </div>
         <div className='btn-container'>
           <button

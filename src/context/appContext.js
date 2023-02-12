@@ -48,9 +48,9 @@ const initialState = {
   position: '',
   company: '',
   jobLocation: '',
-  jobTypeOptions: ['full-time', 'part-time', 'remote', 'internship'],
+  jobTypeOptions: ['full-time', 'part-time', 'remote'],
   jobType: 'full-time',
-  statusOptions: ['interview', 'declined', 'pending'],
+  statusOptions: ['permanent', 'retired'],
   status: 'pending',
   jobs: [],
   totalJobs: 0,
@@ -106,7 +106,7 @@ const AppProvider = ({ children }) => {
     dispatch({ type: SETUP_USER_BEGIN });
     try {
       const { data } = await axios.post(
-        `/api/v1/auth/${endPoint}`,
+        `/user/register`,
         currentUser
       );
 

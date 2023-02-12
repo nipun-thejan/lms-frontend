@@ -17,6 +17,7 @@ const Wrapper = styled.nav`
     align-items: center;
     justify-content: space-between;
   }
+ 
   .toggle-btn {
     background: transparent;
     border-color: transparent;
@@ -63,7 +64,7 @@ const Wrapper = styled.nav`
     cursor: pointer;
   }
   .logo-text {
-    display: none;
+    display: flex;
     margin: 0;
   }
   @media (min-width: 992px) {
@@ -77,7 +78,7 @@ const Wrapper = styled.nav`
       display: none;
     }
     .logo-text {
-      display: block;
+      display: flex;
     }
   }
 `

@@ -34,7 +34,7 @@ const Profile = () => {
           />
           <FormRow
             type='text'
-            labelText='last name'
+            labelText='name'
             name='lastName'
             value={lastName}
             handleChange={(e) => setLastName(e.target.value)}
@@ -45,12 +45,12 @@ const Profile = () => {
             value={email}
             handleChange={(e) => setEmail(e.target.value)}
           />
-          <FormRow
+          {/* <FormRow
             type='text'
             name='location'
             value={location}
             handleChange={(e) => setLocation(e.target.value)}
-          />
+          /> */}
           <button className='btn btn-block' type='submit' disabled={isLoading}>
             {isLoading ? 'Please Wait...' : 'save changes'}
           </button>

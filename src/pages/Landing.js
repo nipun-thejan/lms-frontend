@@ -19,16 +19,20 @@ const Landing = () => {
           {/* info */}
           <div className='info'>
             <h1>
-              job <span>tracking</span> app
+              Learn <span>Management</span> System
             </h1>
             <p>
-              I'm baby wayfarers hoodie next level taiyaki brooklyn cliche blue
-              bottle single-origin coffee chia. Aesthetic post-ironic venmo,
-              quinoa lo-fi tote bag adaptogen everyday carry meggings +1 brunch
-              narwhal.
+            A Learning Management System (LMS) is a software 
+            that helps create, manage and deliver digital learning 
+            content. It streamlines the training process and 
+            provides tools for course creation, user tracking,
+             and assessments. It makes building engaging and 
+             interactive learning experiences easy and effective. 
+             Try our platform to experience the benefits of a 
+             comprehensive and user-friendly LMS.
             </p>
             <Link to='/register' className='btn btn-hero'>
-              Login/Register
+              Login
             </Link>
           </div>
           <img src={main} alt='job hunt' className='img main-img' />
