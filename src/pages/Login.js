@@ -7,7 +7,6 @@ const initialState = {
   name: '',
   email: '',
   password: '',
-  isMember: true,
 };
 
 const Login = () => {
@@ -25,7 +24,7 @@ const Login = () => {
   };
   const onSubmit = (e) => {
     e.preventDefault();
-    const { name, email, password, isMember } = values;
+    const { email, password } = values;
     if (!email || !password ) {
       displayAlert();
       return;
