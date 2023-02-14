@@ -1,6 +1,6 @@
 import Wrapper from '../assets/wrappers/StatItem'
 
-const StatsItem = ({ count, title, icon, color, bcg }) => {
+const CardItem = ({ count, title, icon, color, bcg }) => {
   return (
     <Wrapper color={color} bcg={bcg}>
       <header>
@@ -12,4 +12,4 @@ const StatsItem = ({ count, title, icon, color, bcg }) => {
   )
 }
 
-export default StatsItem
+export default CardItem

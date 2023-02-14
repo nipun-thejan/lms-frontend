@@ -1,5 +1,5 @@
 import { useAppContext } from '../context/appContext'
-import StatItem from './StatItem'
+import CardItem from './CardItem'
 import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from 'react-icons/fa'
 import Wrapper from '../assets/wrappers/StatsContainer'
 
@@ -8,21 +8,21 @@ const StatsContainer = () => {
 
   const defaultStats = [
     {
-      title: 'pending applications',
-      count: stats.pending || 0,
+      title: 'course 1',
+      count: stats.pending || 'ongoing',
       icon: <FaSuitcaseRolling />,
       color: '#e9b949',
       bcg: '#fcefc7',
     },
     {
-      title: 'interviews scheduled',
-      count: stats.interview || 0,
+      title: 'course 2',
+      count: stats.interview || 'finish',
       icon: <FaCalendarCheck />,
       color: '#647acb',
       bcg: '#e0e8f9',
     },
     {
-      title: 'jobs declined',
+      title: 'course 3',
       count: stats.declined || 0,
       icon: <FaBug />,
       color: '#d66a6a',
@@ -33,7 +33,7 @@ const StatsContainer = () => {
   return (
     <Wrapper>
       {defaultStats.map((item, index) => {
-        return <StatItem key={index} {...item} />
+        return <CardItem key={index} {...item} />
       })}
     </Wrapper>
   )

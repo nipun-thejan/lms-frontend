@@ -13,7 +13,7 @@ const initialState = {
 const Register = () => {
   const navigate = useNavigate();
   const [values, setValues] = useState(initialState);
-  const { user, isLoading, showAlert, displayAlert, setupUser } =
+  const { user, isLoading, showAlert, displayAlert, registerUser } =
     useAppContext();
 
   const toggleMember = () => {
@@ -30,12 +30,13 @@ const Register = () => {
       displayAlert();
       return;
     }
+    setValues(initialState)
     const currentUser = { email, password };
     console.log(currentUser)
-    setupUser({
+    registerUser({
       currentUser,
-      endPoint: 'register',
-      alertText: 'User Created! Redirecting...',
+      endPoint: 'user/register',
+      alertText: 'User Created',
     });
 
   };

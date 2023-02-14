@@ -16,6 +16,10 @@ const Wrapper = styled.section`
     padding: 0;
     max-width: 100%;
     width: 100%;
+    /* background-color: red; */
+    :hover{
+      box-shadow: none;
+    }
   }
   .form-row {
     margin-bottom: 0;

@@ -10,6 +10,7 @@ import {
 
 function App() {
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route
@@ -21,10 +22,10 @@ function App() {
           }
         >
           <Route index element={<Stats />} />
-          <Route path='all-jobs' element={<AllJobs />} />
-          <Route path='add-job' element={<AddJob />} />
+          <Route path='all' element={<AllJobs />} />
+          <Route path='add' element={<AddJob />} />
           <Route path='profile' element={<Profile />} />
-          <Route path='/register' element={<Register />} />
+          <Route path='/admin/register' element={<Register />} />
 
         </Route>
         <Route path='/register' element={<Register />} />
@@ -33,6 +34,9 @@ function App() {
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>
+    <title>LMS</title>
+    </>
+    
   )
 }
 
