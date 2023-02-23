@@ -30,6 +30,7 @@ const Wrapper = styled.aside`
       padding-top: 2rem;
       display: flex;
       flex-direction: column;
+      /* background: red; */
     }
     .nav-link {
       display: flex;
@@ -39,6 +40,7 @@ const Wrapper = styled.aside`
       padding-left: 2.5rem;
       text-transform: capitalize;
       transition: var(--transition);
+      /* background: red; */
     }
     .nav-link:hover {
       background: var(--grey-50);
@@ -60,6 +62,9 @@ const Wrapper = styled.aside`
     }
     .active .icon {
       color: var(--primary-500);
+    }
+    .btn{
+      background: none;
     }
   }
 `

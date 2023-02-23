@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
-import { Logo, FormRow, Alert } from '../components';
+import { Logo, FormRow, Alert, Navbar } from '../components';
 import Wrapper from '../assets/wrappers/RegisterPage';
 import { useAppContext } from '../context/appContext';
 import { useNavigate } from 'react-router-dom';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+
 const initialState = {
   name: '',
   email: '',
@@ -35,22 +38,31 @@ const Register = () => {
     console.log(currentUser)
     registerUser({
       currentUser,
-      endPoint: 'user/register',
+      endPoint: 'auth/register',
       alertText: 'User Created',
     });
 
   };
 
-  useEffect(() => {
-    if (user) {
-      setTimeout(() => {
-        navigate('/');
-      }, 3000);
-    }
-  }, [user, navigate]);
+  
 
   return (
     <Wrapper className='full-page'>
+      <Tabs
+      defaultActiveKey="home"
+      transition={false}
+      id="noanim-tab-example"
+      className="mb-3"
+    >
+      <Tab eventKey="home" title="Home">vfv
+      </Tab>
+      <Tab eventKey="profile" title="Profile">
+        222222
+      </Tab>
+      <Tab eventKey="contact" title="Contact" disabled>
+        3333333333
+      </Tab>
+    </Tabs>
       <form className='form' onSubmit={onSubmit}>
         <h3>Register</h3>
         {showAlert && <Alert />}

@@ -31,7 +31,7 @@ const Landing = () => {
              Try our platform to experience the benefits of a 
              comprehensive and user-friendly LMS.
             </p>
-            <Link to='/register' className='btn btn-hero'>
+            <Link to='/login' className='btn btn-hero'>
               Login
             </Link>
           </div>

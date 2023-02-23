@@ -33,7 +33,7 @@ const Login = () => {
 
     loginUser({
       currentUser,
-      endPoint: '/authenticate',
+      endPoint: '/auth/login',
       alertText: 'Login Successful!',
     });
 
@@ -43,7 +43,7 @@ const Login = () => {
     if (user) {
       setTimeout(() => {
         navigate('/');
-      }, 3000);
+      }, 1000);
     }
   }, [user, navigate]);
 
